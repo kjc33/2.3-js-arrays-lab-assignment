@@ -38,7 +38,8 @@ Exercise 6:
   - Replace the string 'pizza' in the foods array with the strings 'sushi' & 'cupcake'.
 */
 
-foods.splice(1, 1, "sushi", "cupcake");
+foods[1] = 'sushi';
+foods[2] = 'cupcake';
 
 /*
 Exercise 7:
@@ -149,3 +150,13 @@ Exercise 15:
   - Given the above numArrays array, use nested forEach methods to sum up all the numbers contained within numArrays and assign to a variable named total.
   - Hint: Be sure to declare and initialize the total variable before the iterations.
 */
+
+let total = 0;
+
+numArrays.forEach(function (innerArr) {
+  innerArr.forEach(function (number) {
+    total += number;
+  });
+});
+
+console.log(total);
